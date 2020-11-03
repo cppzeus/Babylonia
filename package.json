@@ -1,0 +1,49 @@
+{
+    "name": "babylonia",
+    "version": "1.0.0",
+    "description": "User management REST service for metis",
+    "main": "index.js",
+    "scripts": {
+        "start": "pm2 start ecosystem.config.js",
+        "kill": "pm2 kill",
+        "list": "pm2 list",
+        "nomal": "node ./bin/www",
+        "dev": "nodemon ./bin/www"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cppzeus/Babylonia.git"
+    },
+    "keywords": [
+        "metis",
+        "nodejs",
+        "user",
+        "management",
+        "postgresql"
+    ],
+    "author": "Seungyeob Lee",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cppzeus/Babylonia/issues"
+    },
+    "homepage": "https://github.com/cppzeus/Babylonia#readme",
+    "dependencies": {
+        "async": "^3.2.0",
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.5",
+        "date-utils": "^1.2.21",
+        "debug": "^4.2.0",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "http": "0.0.1-security",
+        "http-errors": "^1.8.0",
+        "morgan": "^1.10.0",
+        "password-validator": "^5.1.0",
+        "path": "^0.12.7",
+        "pg": "^8.4.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}

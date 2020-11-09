@@ -9,6 +9,7 @@ let logger = require('morgan');
 // routes include
 let indexRouter = require('./routes/index');
 let memberRouter = require('./routes/member');
+let authRouter = require('./routes/auth');
 
 // app setup
 let app = express();
@@ -25,7 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/member', memberRouter);
+app.use('/api', memberRouter); // Member CRUD
+app.use('/api', authRouter); // Login / Logout / find email or password
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
